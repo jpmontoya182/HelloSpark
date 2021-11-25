@@ -1,0 +1,16 @@
+-- Install package with the same version that the book 
+dotnet add HelloSpark.csproj package Microsoft.Spark --version 0.12.1
+-- Ejecutar el proyecto
+C:\bin\spark-3.0.0-bin-hadoop2.7\bin\spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner "D:\Projects\Spark.net\HelloSpark\bin\Debug\netcoreapp3.1\microsoft-spark-2.4.x-0.12.1.jar" dotnet run "D:\Projects\Spark.net\HelloSpark" "D:\Projects\Spark.net\HelloSpark\output-csv"
+-- debuggear 
+C:\bin\spark-3.0.0-bin-hadoop2.7\bin\spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner "D:\Projects\Spark.net\HelloSpark\bin\Debug\netcoreapp3.1\microsoft-spark-2.4.x-0.12.1.jar" debug
+-- versions
+C:\bin\spark-3.0.0-bin-hadoop2.7\bin\spark-submit --version
+
+
+C:\bin\spark-3.0.0-bin-hadoop2.7\bin\spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local bin\Debug\netcoreapp3.1\microsoft-spark-2.4.x-0.12.1.jar dotnet bin\Debug\netcoreapp3.1\mySparkApp.dll "D:\Projects\Spark.net\HelloSpark\output-csv"
+
+
+C:\bin\spark-3.0.0-bin-hadoop2.7\bin\spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner 
+-- master "D:\Projects\Spark.net\HelloSpark\bin\Debug\netcoreapp3.1\microsoft-spark-2.4.x-0.12.1.jar" 
+dotnet run "D:\Projects\Spark.net\HelloSpark" "D:\Projects\Spark.net\HelloSpark\output-csv"
