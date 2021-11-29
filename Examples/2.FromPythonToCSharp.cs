@@ -30,10 +30,6 @@ namespace HelloSpark.Examples
             dataFrame.CreateGlobalTempView("people");
             spark.Sql("SELECT * FROM global_temp.people").Show();
             spark.NewSession().Sql("SELECT * FROM global_temp.people").Show();
-
-
-
-
         }
 
     }
